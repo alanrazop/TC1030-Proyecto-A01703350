@@ -1,10 +1,9 @@
 # TC1030-Proyecto-A01703350
-Este proyecto es de la materia TC1030. Trata sobre una empresa (escuela) que tiene que modificar la lista de los maestros y sus jurisdicciones, por lo que se genera una estructura de clases para manejar a sus tipos de clases que maneja el profesor. Los separa en Alumnos, Grupos y Asignaturas. 
+Proyecto Integrador de la materia TC1030. Trata sobre una comunidad (Escuela) en la que se tiene que agregar la información de los miembros y además agregar datos de dicha escuela, por lo que se genera una estructura de clases para manejar a los tipos de miembros en la comunidad. Los separa en Alumnos, Profesores y Familiares. 
 
 # Funcionalidad
-Este programa permite altas, bajas y modificaciones de nuevas personas involucradas y registrar los cambios.
-
+Este programa permite mostar la información de los miembros que forman parte de la escuela así como registrar y mostrar datos de la escuela a la que pertenecen.
 Consta de un menu con las opciones iniciales y corre sobre consola.
 
-# Información
-El programa esta hecho con C++ standard por lo que corre en todos los sistemas operativos. Descargue los archivos ".h" y ".cpp" y corralos juntos para que funcione correctamente.
+# Información útil
+El programa esta hecho con C++ standard por lo que corre en todos los sistemas operativos. Descargue los archivos ".h" y ".cpp" y corralos dentro de una misma carpeta (juntos) para que funcione correctamente. 
