@@ -19,7 +19,7 @@ class Miembro{
     string email;  
   public: //Metodos
     Miembro(int, string, string); //Constructor
-    virtual void mostrar();
+    virtual void mostrar()=0;
 };
 
 class Alumno: public Miembro{
