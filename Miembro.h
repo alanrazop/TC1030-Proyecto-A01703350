@@ -22,6 +22,20 @@ class Miembro{
     virtual void mostrar()=0;
 };
 
+//Constructor de la clase Miembro (padre)
+Miembro::Miembro(int _id, string _nombre, string _email){
+  id=_id;
+  nombre=_nombre;
+  email=_email;
+}
+
+void Miembro::mostrar(){
+  cout << "Su id es: " << id << endl;
+  cout << "Su nombre es: " << nombre << endl;
+  cout << "Su correo electrónico es: " << email << endl;
+}
+
+
 class Alumno: public Miembro{
   private: //Atributos
     string matricula;
@@ -32,6 +46,18 @@ class Alumno: public Miembro{
 
 };
 
+Alumno::Alumno(int _id, string _nombre, string _email, string _matricula, float _calif): Miembro(_id,_nombre,_email){
+  matricula=_matricula;
+  calif=_calif;
+}
+
+void Alumno::mostrar(){
+  Miembro::mostrar();
+  cout << "Su matricula es: " << matricula << endl;
+  cout << "Su calificación es: " << calif << endl;
+}
+
+
 class Profesor: public Miembro{
   private: //Atributos
     string materia;
@@ -40,6 +66,16 @@ class Profesor: public Miembro{
     void mostrar();  
 
 };
+
+Profesor::Profesor(int _id, string _nombre, string _email, string _materia): Miembro(_id,_nombre,_email){
+  materia=_materia;
+}
+
+void Profesor::mostrar(){
+  Miembro::mostrar();
+  cout << "Su materia es: " << materia << endl;
+}
+
 
 class Familiar: public Miembro{
   private: //Atributos
@@ -51,42 +87,9 @@ class Familiar: public Miembro{
 
 };
 
-//Constructor de la clase Miembro (padre)
-Miembro::Miembro(int _id, string _nombre, string _email){
-  id=_id;
-  nombre=_nombre;
-  email=_email;
-}
-
-Alumno::Alumno(int _id, string _nombre, string _email, string _matricula, float _calif): Miembro(_id,_nombre,_email){
-  matricula=_matricula;
-  calif=_calif;
-}
-
-Profesor::Profesor(int _id, string _nombre, string _email, string _materia): Miembro(_id,_nombre,_email){
-  materia=_materia;
-}
-
 Familiar::Familiar(int _id, string _nombre, string _email, string _sujeto, int _edad): Miembro(_id,_nombre,_email){
   sujeto=_sujeto;
   edad=_edad;
-}
-
-void Miembro::mostrar(){
-  cout << "Su id es: " << id << endl;
-  cout << "Su nombre es: " << nombre << endl;
-  cout << "Su correo electrónico es: " << email << endl;
-}
-
-void Alumno::mostrar(){
-  Miembro::mostrar();
-  cout << "Su matricula es: " << matricula << endl;
-  cout << "Su calificación es: " << calif << endl;
-}
-
-void Profesor::mostrar(){
-  Miembro::mostrar();
-  cout << "Su materia es: " << materia << endl;
 }
 
 void Familiar::mostrar(){
@@ -94,4 +97,4 @@ void Familiar::mostrar(){
   cout << "El familiar es su: " << sujeto << endl;
   cout << "El familiar tiene: " << edad << " años" << endl;
 }
-#endif /*MIEMBRO_H*/
+#endif
