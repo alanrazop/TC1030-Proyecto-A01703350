@@ -19,7 +19,7 @@ class Miembro{
     string email;  
   public: //Metodos
     Miembro(int, string, string); //Constructor
-    virtual void mostrar()=0;
+    virtual void mostrar()=0; //Método virtual abstracto
 };
 
 //Constructor de la clase Miembro (padre)
