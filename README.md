@@ -7,3 +7,4 @@ Consta de un menu con las opciones iniciales y corre sobre consola.
 
 # Información útil
 El programa esta hecho con C++ standard por lo que corre en todos los sistemas operativos. Descargue los archivos ".h" y ".cpp" y corralos dentro de una misma carpeta (juntos) para que funcione correctamente. 
+Para ello se tiene que ingresar esto para poder compilarlo:  clang++-7 -pthread -std=c++17 -o main main.cpp    ./main
