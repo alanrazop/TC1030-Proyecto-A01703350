@@ -13,3 +13,7 @@ El programa esta hecho con C++ standard por lo que corre en todos los sistemas o
 Para ello se tiene que ingresar esto para poder compilarlo:  clang++-7 -pthread -std=c++17 -o main main.cpp    ./main
 
 # Correcciones
+Para la entrega final de este proyecto se hicieron las siguientes correcciones:
+1. Se empleó de manera correcta la herencia en las clases heredadas de la clase Miembro (clase padre).
+2. Los modificadores de acceso son utilizados de manera adecuada dentro del programa.
+3. Se aplica el polimorfismo correspondiente a cada uno de los tipos de miembros.
