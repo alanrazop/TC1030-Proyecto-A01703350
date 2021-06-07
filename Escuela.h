@@ -77,7 +77,7 @@ class Escuela {
                 cout << "\n" << endl;              
                 mie[2]->mostrar();
                 cout << "\n" << endl;
-                mie[3]->mostrar();0
+                mie[3]->mostrar();
                 cout << "\n" << endl;
                 system("pause>nul"); // Pausa
                 break;
