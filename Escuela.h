@@ -1,10 +1,10 @@
-//
-// Proyecto A01703350 clase Escuela
-// Alan Fernando Razo Peña
-// A01703350
-// 21/05/2021
-// Esta clase Escuela contiene todas las operaciones para hacer altas de información para la escuela, y es utilizada por la función main del programa, parte del proyecto A01703350.
-//
+/*
+* Proyecto A01703350 clase Escuela
+* Alan Fernando Razo Peña
+* A01703350
+* 21/05/2021
+* Esta clase Escuela contiene todas las operaciones para hacer altas de información para profesores, alumnos y familiares asi como proporcionar info de la escuela, y es utilizada por la función main del programa, parte del proyecto A01703350.
+*/
 #ifndef ESCUELA_H
 #define ESCUELA_H
 
@@ -29,7 +29,6 @@ class Escuela {
         int persona;
     //Declaro constructor por default y metodos públicos.
     public:
-
     
       Escuela(): persona(0) {}; //constructor por defualt
 
@@ -49,9 +48,55 @@ class Escuela {
         persona++;
       }
       void muestra_miembros() {
-        for (int i = 0; i < persona; i++)
-        mie[i]->mostrar();
-        cout << "\n" << endl;
+        int opcion;
+        bool repetir = true;
+        do {
+        // Texto del menú que se verá cada vez
+        cout << "\n\n¿Que tipo de miembros desea ver?" << endl;
+        cout << "1. Alumnos" << endl;
+        cout << "2. Profesores" << endl;
+        cout << "3. Familiares" << endl;
+        cout << "0. SALIR" << endl;
+        
+        cout << "\nIngrese una opcion: ";
+        cin >> opcion;
+        
+        switch (opcion) {
+            case 1:
+ 
+                cout << "\n" << endl;               
+                mie[0]->mostrar();
+                cout << "\n" << endl;
+                mie[1]->mostrar();
+                cout << "\n" << endl;
+                system("pause>nul"); // Pausa
+                break;
+                
+            case 2:
+
+                cout << "\n" << endl;              
+                mie[2]->mostrar();
+                cout << "\n" << endl;
+                mie[3]->mostrar();0
+                cout << "\n" << endl;
+                system("pause>nul"); // Pausa
+                break;
+                
+            case 3:
+
+                cout << "\n" << endl;              
+                mie[4]->mostrar();
+                cout << "\n" << endl;
+                mie[5]->mostrar();
+                cout << "\n" << endl;
+                system("pause>nul"); // Pausa            
+                break;
+                
+            case 0:
+            	repetir = false;
+            	break;
+            }        
+         } while (repetir);
       }
 
 string getNombre(){
@@ -110,11 +155,12 @@ void registrarInfo(){
 }
 
 void imprimeInfo(){
+  cout << "\n";
   cout << "Su escuela es " << getNombre() << endl;
   cout << "Esta ubicada en " << getDireccion() << endl;
-  cout << "Número: " << getNumero() << endl;
+  cout << "Número " << getNumero() << endl;
   cout << "En la ciudad de " << getCiudad() << endl;
-  cout << getPais() << endl;
+  cout << "Del país " << getPais() << endl;
   cout << "\n";
   cout << "A continucación se muestran miembros de la comunidad con sus respectivos datos dependiendo de su jerarquía" << endl;
   cout << "\n";
