@@ -91,6 +91,7 @@ void registrarInfo(){
   string numero;
   string ciudad;
   string pais;
+  cout << "Bienvenido a la base de datos, por favor registre su información" << endl;
   cout << "Nombre de la escuela: " << endl;
   getline(cin, nombre);
   setNombre(nombre);
@@ -109,11 +110,15 @@ void registrarInfo(){
 }
 
 void imprimeInfo(){
-  cout << "Bienvenidos a " << getNombre() << endl;
-  cout << "Ubicada en " << getDireccion() << endl;
+  cout << "Su escuela es " << getNombre() << endl;
+  cout << "Esta ubicada en " << getDireccion() << endl;
   cout << "Número: " << getNumero() << endl;
-  cout << "En la ciudad de: " << getCiudad() << endl;
-  cout << "Del país: " << getPais() << endl;
+  cout << "En la ciudad de " << getCiudad() << endl;
+  cout << getPais() << endl;
+  cout << "\n";
+  cout << "A continucación se muestran miembros de la comunidad con sus respectivos datos dependiendo de su jerarquía" << endl;
+  cout << "\n";
+
 }
 
 };
